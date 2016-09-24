@@ -1,0 +1,8 @@
+.git/
+.settings/
+coverage/
+html-report/
+node_modules/
+bld/
+
+*.log

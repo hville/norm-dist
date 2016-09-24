@@ -1,0 +1,25 @@
+{
+  "version": "0.0.4",
+  "description": "normal distribution pdf, cdf, quantile",
+  "main": "./index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cotest": "^1.1.1",
+    "tt": "1.0.3",
+    "untap": "0.2.0"
+  },
+  "keywords": [],
+  "author": "Hugo Villeneuve",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "bitbucket:hville/norm-dist"
+  },
+  "scripts": {
+    "test": "untap test"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
+  "name": "@private/norm-dist"
+}
