@@ -75,7 +75,7 @@ function cdf(z) {
 
 //expected value of prob range
 //http://en.wikipedia.org/wiki/Truncated_normal_distribution
-var intE = function(a,b) {
+function intE(a,b) {
 	return a === 0 && b === 1 ? 0
 		: a === 0 ? -pdf(icdf(b)) / b
 		: b === 1 ? pdf(icdf(a)) / (1 - a)

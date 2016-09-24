@@ -35,16 +35,16 @@ ct('pdf x ==> d, must be reasonably accurate', function(){
 })
 
 ct('intE p,p == Ex, must manage large value ranges', function(){
-	t.ok( N.intE(0.99999,1) > N.intE(0.99998,1), 'intE should behave for small max intervals')
-	t.ok( N.intE(0.00001,1) < N.intE(0.00002,1), 'intE should behave for small min intervals')
+	ct('>', N.intE(0.99999,1), N.intE(0.99998,1), 'intE should behave for small max intervals')
+	ct('<', N.intE(0.00001,1), N.intE(0.00002,1), 'intE should behave for small min intervals')
 })
 
 ct('intE p,p == Ex, must be reasonably accurate', function(){
-	ct('<', Math.abs(N.intE(0,1), 0, 0.0000001), 'average over whole p range must be ~0')
-	ct('<', Math.abs(N.intE(0.49,0.51), 0, 0.000001), 'average over centered p range must be ~0')
+	ct('<', Math.abs(N.intE(0,1)), 1e-7, 'average over whole p range must be ~0')
+	ct('<', Math.abs(N.intE(0.49,0.51)), 1e-7, 'average over centered p range must be ~0')
 	ct('===', N.intE(0.7,0.7),	N.icdf(0.7), '0 witdth interval average = median')
 
-	ct('<', Math.abs(N.intE(0.889,0.891)/N.icdf(0.89), 1, 0.000005), 'interval average ~ median')
-	ct('<', Math.abs(N.intE(0.989,0.991)/N.icdf(0.99), 1, 0.0003), 'interval average ~ median')
-	ct('<', Math.abs(N.intE(0.99999998,1)/N.icdf(0.99999999), 1, 0.01), 'interval average ~ median')
+	ct('<', Math.abs(N.intE(0.889,0.891)/N.icdf(0.89) - 1), 0.000005, 'interval average ~ median')
+	ct('<', Math.abs(N.intE(0.989,0.991)/N.icdf(0.99) - 1), 0.0003, 'interval average ~ median')
+	ct('<', Math.abs(N.intE(0.99999998,1)/N.icdf(0.99999999) - 1), 0.01, 'interval average ~ median')
 })
