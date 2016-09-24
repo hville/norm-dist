@@ -1,25 +1,27 @@
 {
-  "version": "0.0.4",
+  "name": "norm-dist",
+  "version": "1.0.0",
   "description": "normal distribution pdf, cdf, quantile",
+  "keywords": [
+    "normal", "distribution", "gaussian",
+    "probability", "cdf", "pdf", "quantile", "truncated"
+  ],
+  "author": "Hugo Villeneuve",
   "main": "./index.js",
   "dependencies": {},
   "devDependencies": {
-    "cotest": "^1.1.1",
-    "tt": "1.0.3",
-    "untap": "0.2.0"
+    "cotest": "^1.1.1"
   },
-  "keywords": [],
-  "author": "Hugo Villeneuve",
-  "license": "UNLICENSED",
+  "private": false,
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "bitbucket:hville/norm-dist"
+    "url": "https://github.com/hville/norm-dist.git"
   },
   "scripts": {
-    "test": "untap test"
+    "test": "cotest test"
   },
   "publishConfig": {
-    "registry": "http://localhost:4873/"
-  },
-  "name": "@private/norm-dist"
+    "registry": "https://registry.npmjs.org/"
+  }
 }
