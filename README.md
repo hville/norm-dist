@@ -8,7 +8,8 @@
 # Example
 
 ```javascript
-normDist = require('norm-dist')
+var normDist = require('norm-dist'),
+    pdf = require('norm-dist/pdf') //same as normDist.pdf
 var quartile = normDist.icdf(0.25)
     probability = normDist.pdf(quartile),
     cummulative = normDist.cdf(quartile) // => 0.25
@@ -26,6 +27,8 @@ Many times, only this is needed.
 * `.cdf(number) => number` z to cummulative probability
 * `.icdf(number) => number` probability to z, `0 <= p <= 1`
 * `.intE(z0, z1) => number` average of a truncated interval
+
+All 4 functions are also available directly in standalone files(`require('normDist').intE === require('normDist/intE')`)
 
 # License
 
