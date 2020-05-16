@@ -1,6 +1,9 @@
 {
   "name": "norm-dist",
-  "version": "2.0.2",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "version": "3.0.0",
   "description": "normal distribution pdf, cdf, quantile",
   "keywords": [
     "normal",
@@ -14,8 +17,8 @@
   ],
   "author": "Hugo Villeneuve",
   "devDependencies": {
-    "@types/node": "^13.9.1",
-    "cotest": "^4.0.3"
+    "@types/node": "^14.0.1",
+    "assert-op": "^0.5.1"
   },
   "license": "MIT",
   "repository": {
@@ -25,5 +28,6 @@
   "scripts": {
     "test": "node test",
     "prepublishOnly": "npm test"
-  }
+  },
+  "dependencies": {}
 }

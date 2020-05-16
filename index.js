@@ -1,6 +1,4 @@
-var pdf = require('./pdf.js'),
-		cdf = require('./cdf.js'),
-		icdf = require('./icdf.js'),
-		intE = require('./intE.js')
-
-module.exports = {pdf:pdf, cdf:cdf, icdf:icdf, intE:intE}
+export {default as pdf} from './pdf.js'
+export {default as cdf} from './cdf.js'
+export {default as icdf} from './icdf.js'
+export {default as intE} from './intE.js'

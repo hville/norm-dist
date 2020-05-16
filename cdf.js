@@ -1,5 +1,4 @@
-var pdf = require('./pdf')
-
+import pdf from './pdf.js'
 /**
  * Normal Distribution CDF Approximation
  * http://en.wikipedia.org/wiki/Normal_distribution#Numerical_approximations_for_the_normal_CDF
@@ -7,7 +6,7 @@ var pdf = require('./pdf')
  * @param {number} z
  * @return {number} probability
  */
-module.exports = function cdf(z) {
+export default function(z) {
 	if (z > 6) return 1 //gives 1-1e-10, well below target 1e-8 accuracy
 	else if (z < -6) return 0 //gives 1e-10, well below target 1e-8 accuracy
 	var t = 1 / (1 + Math.abs(z)*0.2316419),

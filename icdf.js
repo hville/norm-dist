@@ -6,7 +6,7 @@
  * @param {number} p - probability ]0..1[
  * @return {number}
  */
-module.exports = function icdf(p) {
+export default function(p) {
 	var a = [-3.969683028665376e+01, 2.209460984245205e+02,
 				-2.759285104469687e+02, 1.383577518672690e+02,
 				-3.066479806614716e+01, 2.506628277459239e+00

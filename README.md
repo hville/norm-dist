@@ -8,12 +8,12 @@
 # Example
 
 ```javascript
-var normDist = require('norm-dist'),
-    pdf = require('norm-dist/pdf') //same as normDist.pdf
-var quartile = normDist.icdf(0.25)
-    probability = normDist.pdf(quartile),
-    cummulative = normDist.cdf(quartile) // => 0.25
-    interQuartileAverage = normDist.cdf(-quartile, quartile) // => 0
+import {icdf, cdf} from 'norm-dist'
+import pdf from 'norm-dist/pdf.js' //same as normDist.pdf
+var quartile = icdf(0.25)
+    probability = pdf(quartile),
+    cummulative = cdf(quartile) // => 0.25
+    interQuartileAverage = cdf(-quartile, quartile) // => 0
 ```
 
 # Why
