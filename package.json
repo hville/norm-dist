@@ -2,8 +2,7 @@
   "name": "norm-dist",
   "type": "module",
   "main": "index.js",
-  "module": "index.js",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "normal distribution pdf, cdf, quantile",
   "keywords": [
     "normal",
@@ -28,6 +27,5 @@
   "scripts": {
     "test": "node test",
     "prepublishOnly": "npm test"
-  },
-  "dependencies": {}
+  }
 }

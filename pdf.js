@@ -4,5 +4,5 @@
  * @return {number} probability
  */
 export default function(z) {
-	return Math.exp(-0.5 * (Math.log(2 * Math.PI) + z*z))
+	return Math.exp(-(Math.log(2 * Math.PI) + z*z) * 0.5)
 }

@@ -3,7 +3,7 @@
 
 *small standalone normal distribution pdf, cdf icdf (quantile) and truncated average*
 
-• [Example](#Example) • [Features](#Features) • [Limitations](#Limitations) • [Why](#Why) • [API](#API) • [License](#license)
+• [Example](#Example) • [Why](#Why) • [API](#API) • [License](#license)
 
 # Example
 
