@@ -1,12 +1,6 @@
 import t from 'assert-op'
 import {icdf, cdf, pdf, intE} from './index.js'
 
-// icdf p ==> x, must manage ]0..1[ values
-t('===', icdf(0.5), 0, 'x(p-0.5) = 0')
-t('<', Math.abs(icdf(0.0228)+2), 1e-3, 'error for x(p=0.0228) ~= -2.0')
-t('<', Math.abs(icdf(0.95)-1.644853626951), 1e-7, 'error for x(p=0.95) ~= 1.644853626951')
-t('<', Math.abs(icdf(0.98928)-2.3), 1e-3, 'error for x(p=0.98928) ~= 2.3')
-
 // cdf x ==> p, must manage large value ranges
 t('>', cdf(5), 0.99999, 'cdf must manage high values')
 t('>', cdf(6), 0.999999, 'cdf must manage high values')

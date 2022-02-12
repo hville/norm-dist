@@ -2,8 +2,9 @@
  * Lower tail quantile for standard normal distribution function
  * Probit function, inverse CDF, z(p)
  * Algorithm by Peter John Acklam
- * http://home.online.no/~pjacklam/notes/invnorm/impl/misra/normsinv.html
- * @param {number} p - probability ]0..1[
+ * http://web.archive.org/web/20151030215612/http://home.online.no/~pjacklam/notes/invnorm/
+ *
+ * @param {number} [p] - probability ]0..1[
  * @return {number}
  */
 const a0 = -3.969683028665376e+01,
@@ -31,7 +32,7 @@ const a0 = -3.969683028665376e+01,
 const pL	= 0.02425,
 			pH = 1 - pL
 
-export default function(p) {
+export default function(p=Math.random()) {
 	if ( p < pL ) {
 		const q = Math.sqrt(-Math.log(p) * 2)
 		return (((((c0*q + c1)*q + c2)*q + c3)*q + c4)*q + c5) / ((((d0*q + d1)*q + d2)*q + d3)*q + 1)

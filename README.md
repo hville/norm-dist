@@ -25,8 +25,9 @@ Many times, only this is needed.
 
 * `.pdf(number) => number` z to probability
 * `.cdf(number) => number` z to cummulative probability
-* `.icdf(number) => number` probability to z, `0 <= p <= 1`
 * `.intE(z0, z1) => number` average of a truncated interval
+* `.icdf(number=Math.random()) => number` probability to z, `0 <= p <= 1` using the Acklam approximation
+* `.Z(number=Math.random()) => number` probability to z, `0 <= p <= 1` using the faster Voutier approximation for random variables
 
 All 4 functions are also available directly in standalone files(`require('normDist').intE === require('normDist/intE')`)
 
